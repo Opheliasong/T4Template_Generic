@@ -67,8 +67,8 @@ public class ResourceLoader
 			switch (char.GetUnicodeCategory(sb[i]))
 			{
 				case UnicodeCategory.DecimalDigitNumber:
-					case UnicodeCategory.LowercaseLetter:
-					case UnicodeCategory.UppercaseLetter:
+				case UnicodeCategory.LowercaseLetter:
+				case UnicodeCategory.UppercaseLetter:
 					break;
 				default:
 					sb[i] = '_';

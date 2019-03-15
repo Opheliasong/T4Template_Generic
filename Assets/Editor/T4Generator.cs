@@ -45,7 +45,7 @@ public class T4Generator : EditorWindow {
 
             if (GUILayout.Button("Generate by selected object hierachy") == true)
             {
-                HireachyT4TemplateGenerator savedTemplates = new HireachyT4TemplateGenerator();
+                HierarchyT4TemplateGenerator savedTemplates = new HierarchyT4TemplateGenerator();
                 var go = Selection.gameObjects;
 
                 if(go == null || go.Length == 0)
@@ -58,6 +58,7 @@ public class T4Generator : EditorWindow {
                 {
                     savedTemplates.Setup(iter, "", defaultTTfilePath);
                     savedTemplates.Run();
+                    //savedTemplates.Perspective(iter);
                 }
             }
         }

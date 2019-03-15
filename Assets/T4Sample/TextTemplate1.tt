@@ -4,7 +4,10 @@
 <#@ import namespace="System.Collections.Generic" #>
 
 <#@ output extension=".cs" #>
-<# var properties = new string[] { "PORPERTY" }; #>
+<# 
+    var properties = new string[] { "PORPERTY" };
+    var propertiesPathKey = new string[] {"PATHKEY"};
+#>
 
 //Include code
 using System.Collections;
@@ -13,12 +16,28 @@ using UnityEngine;
 
 //This is Generate code
 class CLASSNAME : MonoBehaviour {
+
+    /// cached gameObject arrays
+    protected GameObject[] arrs = new GameObject[<#= properties.Length #>];
+
+// Generate Code:
 <# //This code runs in the text template:
-    foreach (string propertyName in properties) {
+    for (int i = 0; i < properties.Length; i++) {
+    string propertyName = properties[i];
 #>
-    // Generate Code:
-    public GameObject <#= propertyName #>;
+    public GameObject <#= propertyName #> { get{ return arrs[<#= i #>];} }
 <#
     }
 #>
+
+    void Awake()
+    {
+<# for (int i = 0;i < properties.Length; i++)
+{
+#>   
+        arrs[<#= i #>] = transform.Find("<#=propertiesPathKey[i]#>").gameObject;
+<#
+}
+#>
+    }
 }

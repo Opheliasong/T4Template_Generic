@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>270</y>
+      <w>230</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/UnityTemplateGenerator/
+
+--
+# msg : string
+# fileName ; string
+# generator : TemplateGenerator
+# sampleT4FilePath : string
+# exportTtFilePath : string
+# csFilePath : string
+# nameSpace : string
+# className : string
+
+--
++ UnityTemplateGenerator()
++ Run() : bool
+# PreGenerateSetup() {abstract}
+# GenerateFile() : bool
+# ExportT4Text() : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>690</y>
+      <w>290</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>ResourceLoadT4TemplateGenerator
+--
+# PreGenerateSetup() : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>570</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>260.0;10.0;260.0;70.0;10.0;70.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>690</y>
+      <w>530</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>HireachyT4TemplateGenerator
+--
+- saveList : List&lt;GameObject&gt;
+
+--
+#PreGenerateSetup(): bool
++Setup(GameObject go, string defNameSpace, string defaultTemplatePath) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>570</y>
+      <w>250</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;230.0;70.0;230.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>350</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>TemplateGenerator
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>350</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=black
+&lt;&lt;Mono.TextTemplating&gt;&gt;</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

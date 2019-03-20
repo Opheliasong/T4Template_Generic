@@ -59,7 +59,6 @@ public class HierarchyT4TemplateGenerator : UnityTemplateGenerator
         /// <returns></returns>
         public override string ToString()
         {
-            //return base.ToString();
             string retVal = "";
             foreach(var iter in childrenName)
             {

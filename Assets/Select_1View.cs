@@ -24,20 +24,20 @@ class Select_1View : MonoBehaviour {
     void Awake()
     {
    
-    arrs[0] = transform.Find("child_1").gameObject;
+        arrs[0] = transform.Find("child_1").gameObject;
    
-    arrs[1] = transform.Find("child_1/child_1_1").gameObject;
+        arrs[1] = transform.Find("child_1/child_1_1").gameObject;
    
-    arrs[2] = transform.Find("child_2").gameObject;
+        arrs[2] = transform.Find("child_2").gameObject;
    
-    arrs[3] = transform.Find("child_2/child_2_1").gameObject;
+        arrs[3] = transform.Find("child_2/child_2_1").gameObject;
    
-    arrs[4] = transform.Find("child_2/child_2_2").gameObject;
+        arrs[4] = transform.Find("child_2/child_2_2").gameObject;
    
-    arrs[5] = transform.Find("child_2/child_2_2/child_2_2_1").gameObject;
+        arrs[5] = transform.Find("child_2/child_2_2/child_2_2_1").gameObject;
    
-    arrs[6] = transform.Find("child_2/child_2_2/child_2_2_2").gameObject;
+        arrs[6] = transform.Find("child_2/child_2_2/child_2_2_2").gameObject;
    
-    arrs[7] = transform.Find("child_2/child_2_2/child_2_2_3").gameObject;
+        arrs[7] = transform.Find("child_2/child_2_2/child_2_2_3").gameObject;
     }
 }
